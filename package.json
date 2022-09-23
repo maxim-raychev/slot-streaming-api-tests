@@ -1,0 +1,23 @@
+{
+  "name": "slot-streaming-api-tests",
+  "version": "1.0.0",
+  "description": "Api tests for slot streaming platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxim-raychev/slot-streaming-api-tests.git"
+  },
+  "author": "Maxim Raychev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxim-raychev/slot-streaming-api-tests/issues"
+  },
+  "homepage": "https://github.com/maxim-raychev/slot-streaming-api-tests#readme",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.0",
+    "cypress": "^10.8.0"
+  }
+}
