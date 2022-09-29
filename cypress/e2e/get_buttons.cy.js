@@ -1,9 +1,9 @@
-const arcade = '9106'
-const gid = 'H711'
-const url = '/slots/' + arcade + '/game/' + gid + '/buttons'
+const arcade_number = Cypress.env('arcade_number')
+const gid = Cypress.env('gid')
+const url = '/slots/' + arcade_number + '/game/' + gid + '/buttons'
 const responseBody = {
-    "arcade_number": "9106",
-    "gid": "H711",
+    "arcade_number": arcade_number,
+    "gid": gid, 
     "layout": [
         {
             "name": "\"Start / Skip /Take win\"",
@@ -48,6 +48,10 @@ const responseBody = {
         {
             "name": "\"autostart\"",
             "mask": 1024
+        },
+        {
+            "name": "\"info\"",
+            "mask": 2048
         }
     ]
 }

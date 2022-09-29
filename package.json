@@ -4,7 +4,8 @@
   "description": "Api tests for slot streaming platform",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run"
+    "test": "cypress run",
+    "test-prod": "cypress run --env configFile=production"
   },
   "repository": {
     "type": "git",

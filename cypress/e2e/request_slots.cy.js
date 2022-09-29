@@ -1,14 +1,17 @@
 const url = '/slots/request'
+const arcade_number = Cypress.env('arcade_number')
+const gid = Cypress.env('gid')
+
 const insertFundsBody = {
     name: "insert-funds",
     args: [
         {
             "name": "arcade_number",
-            "value": "9106"
+            "value": arcade_number
         },
         {
             "name": "gid",
-            "value": "H711"
+            "value": gid
         },
         {
             "name": "amount",

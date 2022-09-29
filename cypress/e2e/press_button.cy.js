@@ -1,7 +1,9 @@
 const url = '/buttons'
+const arcade_number = Cypress.env('arcade_number')
+const gid = Cypress.env('gid')
 const pressButtonBody = {
-    "arcade_number": "9106",
-    "gid": "H711",
+    "arcade_number": arcade_number,
+    "gid": gid,
     "button_mask": 1                                  
 }
 

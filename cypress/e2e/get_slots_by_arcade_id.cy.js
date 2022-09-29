@@ -1,4 +1,4 @@
-const arcade_id = 1
+const arcade_id = Cypress.env('arcade_id')
 const url = '/arcades/' + arcade_id + '/slots'
 
 describe("GET Slots by arcade id tests", () => {
@@ -16,29 +16,29 @@ describe("GET Slots by arcade id tests", () => {
 
     it('should have correct logo', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].logo).contain('Logo=Novomatic.svg')
+            expect(body[0].logo).to.eql(Cypress.env('logo'))
         })
     })
 
     it('should have correct game id', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].gid).to.eql('H711')
+            expect(body[0].gid).to.eql(Cypress.env('gid'))
         })
     })
 
     it('should have correct body', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].body).to.eql('FV 623')
+            expect(body[0].body).to.eql(Cypress.env('body'))
         })
     })
     it('should have correct denomination', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].denomination).to.eql('0.05')
+            expect(body[0].denomination).to.eql(Cypress.env('denomination'))
         })
     })
     it('should have correct game title', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].game).to.eql('Gaminator')
+            expect(body[0].game).to.eql(Cypress.env('game'))
         })
     })
     it('should be active', ()=> {
@@ -48,7 +48,7 @@ describe("GET Slots by arcade id tests", () => {
     })
     it('should have correct arcade number', ()=> {
         cy.request(url).then( ({body}) => {
-            expect(body[0].arcade_number).to.eql('9106')
+            expect(body[0].arcade_number).to.eql(Cypress.env('arcade_number'))
         })
     })
 })
