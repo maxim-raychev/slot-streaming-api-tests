@@ -1,0 +1,12 @@
+{
+    "baseUrl": "http://81.25.225.140:8081/api",
+    "env": {
+        "arcade_id": "1",
+        "arcade_number": "9106",
+        "logo": "/img/Logo=Novomatic.svg",
+        "gid": "H711",
+        "body": "FV 623",
+        "game": "Gaminator",
+        "denomination": "0.05"
+    }
+}
