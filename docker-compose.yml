@@ -1,0 +1,10 @@
+version: '3'
+services:
+  ss-api-tests:
+    image: cypress
+    build: ./
+    container_name: cypress
+    command: npx cypress run
+    volumes:
+      - ./cypress:/slot-streaming-api-tests/cypress
+      - ./cypress.config.js:/slot-streaming-api-tests/cypress.config.js
