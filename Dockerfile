@@ -5,4 +5,4 @@ COPY package.json .
 COPY package-lock.json .
 
 RUN npm install
-RUN npx cypress verify
+RUN npx cypress run
