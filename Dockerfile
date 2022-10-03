@@ -7,5 +7,5 @@ COPY cypress.config.js .
 COPY cypress .
 
 RUN npm install
-RUN npx cypress run
+RUN npx cypress verify
 
