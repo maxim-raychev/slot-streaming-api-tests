@@ -6,7 +6,7 @@ const path = require('path')
 
 function getConfigurationByFile(file) {
   
-  const pathToConfigFile = path.resolve('../slot-streaming-api-tests/cypress', 'config', `${file}.json`)
+  const pathToConfigFile = path.resolve(process.cwd(), 'cypress/config', `${file}.json`)
 
   return fs.readJson(pathToConfigFile)
 }
@@ -14,9 +14,11 @@ function getConfigurationByFile(file) {
 
 module.exports = defineConfig({
   e2e: {
+    supportFile: false,
     setupNodeEvents(on, config) {
       const file = config.env.configFile || 'development'
       return getConfigurationByFile(file)
     },
+    
   },
 });
