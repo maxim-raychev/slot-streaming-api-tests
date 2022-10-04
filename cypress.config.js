@@ -6,7 +6,7 @@ const path = require('path')
 
 function getConfigurationByFile(file) {
   
-  const pathToConfigFile = path.resolve(process.cwd(), 'cypress/config', `${file}.json`)
+  const pathToConfigFile = path.resolve(__dirname, 'cypress/config', `${file}.json`)
 
   return fs.readJson(pathToConfigFile)
 }
