@@ -33,6 +33,6 @@ jobs:
       
       steps:
       - name: Run API test versus dev environment
-        run: npx cypress run
+        run: npx cypress run --config-file ci/cypress.config.js
       
   
