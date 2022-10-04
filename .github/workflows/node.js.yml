@@ -21,9 +21,10 @@ jobs:
       with:
         node-version: 18.x
         cache: 'npm'
-    - run: npm ci
+    - name: Install npm packages
+      run: npm ci
     - name: Verify Cypress
-    - run: npx cypress verify  
+      run: npx cypress verify  
     
   test:
   
@@ -31,8 +32,7 @@ jobs:
       needs: [ build ]
       
       steps:
-       - name: Run API test versus dev environment
-       - run: npx cypress run
-      
+      - name: Run API test versus dev environment
+        run: npx cypress run
       
   
