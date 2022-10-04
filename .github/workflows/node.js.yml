@@ -35,6 +35,6 @@ jobs:
       - name: Run API test versus dev environment
         run: pwd
       - name: LIST DIR
-        run: ls -la
+        run: cd .. && ls -la
       
   
