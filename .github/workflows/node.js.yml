@@ -34,6 +34,7 @@ jobs:
       steps:
       - name: Run API test versus dev environment
         run: pwd
-        run: ls -al
+      - name: LIST DIR
+        run: ls -la
       
   
