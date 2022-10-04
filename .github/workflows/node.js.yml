@@ -32,9 +32,10 @@ jobs:
       needs: [ build ]
       
       steps:
-      - name: Run API test versus dev environment
-        run: pwd
-      - name: LIST DIR
-        run: cd ../../ && ls -la
+      - uses: actions/checkout@v3
+      - name: Run NPM INSTALL
+        run: npm i
+      - name: Run cypress tests
+        run: npx cypress run
       
   
